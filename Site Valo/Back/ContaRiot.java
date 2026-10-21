@@ -1,22 +1,21 @@
 package com.valoinfo.model;
 
-import jakarta.persistence.*; // Importação necessária
+import jakarta.persistence.*;
 
-@Entity // Indica que isto vai ser uma tabela na base de dados
+@Entity
 public class ContaRiot {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id; // Chave primária gerada automaticamente
+    private Long id;
     
-    @Column(unique = true) // Impede que existam dois nicks iguais
+    @Column(unique = true)
     private String nick;
     
     private String password;
 
     public ContaRiot() {}
 
-    // Gere os Getters e Setters para o id, nick e password
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     
